@@ -1,0 +1,91 @@
+.Content__characteristics {
+    padding: 60px 0px;
+    padding-bottom: 100px;
+}
+.Content__characteristics--container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 60px 80px;
+    box-sizing: border-box;
+    border: 1px solid var(--borderRaffleYellow);
+    border-radius: 20px;
+}
+.Content__characteristics--item {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    width: 230px;
+    gap: 20px;
+    position: relative;
+}
+.Content__characteristics--item::after {
+    content: '';
+    position: absolute;
+    right: -22%;
+    height: 100%;
+    width: 1px;
+    background-color: var(--buttonYellow);
+}
+.Content__characteristics--item:last-of-type::after {
+    display: none;
+}
+.Content__characteristics--icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--buttonYellow);
+}
+.Content__characteristics--details-title {
+    margin-bottom: 8px;
+}
+.Content__characteristics--details-title h4 {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--buttonYellow);
+}
+.Content__characteristics--details-description p {
+    font-size: 12px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.4;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 1400px) {
+    .Content__characteristics--container {
+        flex-wrap: wrap;
+    }
+    .Content__characteristics--item {
+        width: 42%;
+    }
+    .Content__characteristics--item::after {
+        right: -19%;
+    }
+    .Content__characteristics--container:nth-child(even) .Content__characteristics--item::after {
+        display: none !important;
+    }
+    .Content__characteristics--item:nth-of-type(2)::after {
+        display: none;
+    }
+}
+@media(max-width: 768px) {
+    .Content__characteristics--container {
+        padding: 30px 40px;
+    }
+}
+@media(max-width: 600px) {
+    .Content__characteristics--container {
+        gap: 30px;
+    }
+    .Content__characteristics--item {
+        width: 100%;
+    }
+    .Content__characteristics--item::after {
+        display: none;
+    }
+}

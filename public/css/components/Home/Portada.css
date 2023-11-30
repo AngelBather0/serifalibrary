@@ -1,0 +1,118 @@
+.Content__portada {
+    padding: 40px 0px;
+}
+.Content__portada--container {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    gap: 30px;
+}
+.Content__portada--details-slogan {
+    margin-bottom: 10px;
+}
+.Content__portada--details-slogan p {
+    font-family: 'Poppins', sans-serif;
+    color: var(--topBarYellow);
+    font-weight: 600;
+}
+.Content__portada--details-title {
+    margin-bottom: 10px;
+}
+.Content__portada--details-title h2 {
+    line-height: 1.25;
+    font-family: 'Poppins', sans-serif;
+    font-size: 69px;
+    color: #fff;
+    font-weight: 600;
+}
+.Content__portada--details-description {
+    margin-bottom: 25px;
+}
+.Content__portada--details-description p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.8;
+}
+.Content__portada--details-buttons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.Content__portada--details-buttons button {
+    height: 46px;
+    padding: 0px 25px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    border-radius: 8px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+.Content__portada--details-buttons button:first-of-type {
+    background-color: var(--topBarYellow);
+    color: #fff;
+    transition: .3s ease-in-out;
+}
+.Content__portada--details-buttons button:first-of-type:hover {
+    background-color: transparent;
+    border-color: var(--topBarYellow);
+    transition: .3s ease-in-out;
+}
+.Content__portada--details-buttons button:last-of-type {
+    background-color: transparent;
+    border: 1px solid var(--topBarYellow);
+    color: #fff;
+    transition: .3s ease-in-out;
+}
+.Content__portada--details-buttons button:last-of-type:hover {
+    background-color: var(--topBarYellow);
+    transition: .3s ease-in-out;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 1024px) {
+    .Content__portada--container {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .Content__portada--banner {
+        display: flex;
+        justify-content: center;
+    }
+    .Content__raffles--container {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+@media(max-width: 768px) {
+    .Content__raffles--raffleCard-name h4 {
+        font-size: 26px !important;
+    }
+    .Content__raffles--raffleCard-foundation p {
+        font-size: 14px !important;
+    }
+    .Content__portada--banner img {
+        max-width: 100%;
+    }
+}
+@media(max-width: 600px) {
+    .Content__portada--details-title h2 {
+        font-size: 48px;
+    }
+    .Content__portada--details-description p {
+        font-size: 18px;
+    }
+}
+@media(max-width: 480px) {
+    .Content__portada--details-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .Content__portada--details-buttons button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
